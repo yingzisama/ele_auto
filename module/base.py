@@ -227,6 +227,16 @@ class Base(object):
         self.d.toast.show(text, duration)
         logger.info("展示文字")
 
+    def assert_get_toast_message(self,toast_content):
+        """
+        页面出现弹窗提示时间，默认时间5s
+        :param text:弹窗内容
+        :return:
+        """
+        message = self.d.toast.get_message()
+        assert message == toast_content
+        logger.info("获取toast内容:「{}」".format(message))
+
     def wait_element_appear(self, element, log_text, timeout=5):
         """
         等待某个元素的出现，默认等待时间5s
@@ -279,6 +289,18 @@ class Base(object):
         """
         is_exist = False
         if self.d(text=element).exists(timeout=5):
+            is_exist = True
+        return is_exist
+
+    def elements_exist(self, element1,element2):
+        """
+        断言当前页面元素情况，用于判断多个页面状态的判断
+        :param element1: resourceId
+        :param element2: text
+        :return:
+        """
+        is_exist = False
+        if self.d(resourceId=element1,text=element2).exists(timeout=5):
             is_exist = True
         return is_exist
 

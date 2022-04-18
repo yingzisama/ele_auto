@@ -1,20 +1,21 @@
 {
-  "a2163780898f681a39ae0da3cf8a479d" : {
+  "b7280d81ec74a1d4de140ff9c9261fe5" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "94826ae192047ab",
-      "status" : "passed",
+      "uid" : "7077768c10836d3",
+      "status" : "broken",
+      "statusDetails" : "TypeError: click_description() missing 1 required positional argument: 'log_text'",
       "time" : {
-        "start" : 1650019604622,
-        "stop" : 1650019611837,
-        "duration" : 7215
+        "start" : 1650279585647,
+        "stop" : 1650279594875,
+        "duration" : 9228
       }
     } ]
   }

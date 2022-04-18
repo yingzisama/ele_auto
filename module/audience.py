@@ -69,6 +69,18 @@ ele_hostcard_eit = 'com.yiwuzhibo:id/av_room_person_detail_at'
 ele_hostcard_focus = 'com.yiwuzhibo:id/av_room_person_detail_focus'
 #主播信息卡片-好友
 ele_hostcard_friend_status = 'com.yiwuzhibo:id/av_room_friend_status'
+#主播信息卡片-拉黑
+ele_hostcard_shield = '拉黑'
+#拉黑-确定
+ele_hostcard_shield_comfirm = 'com.yiwuzhibo:id/tv_comfirm'
+#发言栏-发送
+ele_input_confirm_tv = 'com.yiwuzhibo:id/input_confirm_tv'
+#Mind页
+mind_downbutton = '//*[@resource-id="com.yiwuzhibo:id/tab_layout"]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[5]'
+#个人中心
+mind_people_center = '个人中心'
+#黑名单管理
+mind_shield_manager = '黑名单管理'
 
 class Audience(Base):
     def __init__(self,driver):
@@ -150,3 +162,86 @@ class Audience(Base):
     @allure.step('点击进入主播的主页')
     def click_hostcard_homepage(self):
         self.base.click(ele_hostcard_homepage,'主页按钮')
+
+    @allure.step('断言主播主页界面元素')
+    def assert_host_person_detail(self):
+        #断言主播关注数
+        self.base.assert_image_findit('./aseert_pic/audience_detail_follower.jpg')
+        #断言主播粉丝数
+        self.base.assert_image_findit('./aseert_pic/audience_detail_fans.jpg')
+        #断言主播贡献榜入口
+        self.base.assert_image_findit('./aseert_pic/audience_detail_contributionRanking.jpg')
+        #断言主播粉丝榜入口
+        self.base.assert_image_findit('./aseert_pic/audience_detail_fansRanking.jpg')
+        #断言主播短视频作品tab
+        self.base.assert_image_findit('./aseert_pic/audience_detail_myVideo.jpg')
+        #断言主播喜欢的短视频作品tab
+        self.base.assert_image_findit('./aseert_pic/audience_detail_myLikeVideo.jpg')
+        #断言主播关注按钮
+        self.base.assert_image_findit('./aseert_pic/audience_detail_focus.jpg')
+
+    @allure.step('点击@主播')
+    def click_hostcard_eit(self):
+        self.base.click(ele_hostcard_eit,'@')
+
+    @allure.step('发送')
+    def click_input_confirm_tv(self):
+        self.base.click(ele_input_confirm_tv,'发送')
+
+    @allure.step('断言发言内容存在')
+    def assert_live_room_im(self):
+        a = self.base.elements_exist('com.yiwuzhibo:id/live_room_im_tv','a 正在自动化测试：@自动化测试主播端 111')
+        assert a == True
+
+    @allure.step('主播信息卡片-获取粉丝数')
+    def get_hostcard_fans_num(self):
+        fans_str = self.base.get_element_text(ele_hostcard_fans)
+        fans = int(fans_str)
+        logger.info("当前粉丝数为:{}".format(fans))
+        return fans
+
+    @allure.step('主播信息卡片-关注主播')
+    def click_hostcard_focus(self):
+        self.base.click(ele_hostcard_focus,ele_hostcard_focus)
+
+    @allure.step('主播信息卡片-拉黑主播')
+    def click_hostcard_shield(self):
+        self.base.click(ele_hostcard_more,'更多')
+        self.base.click(ele_hostcard_shield,'拉黑')
+        self.base.click(ele_hostcard_shield_comfirm,'确定')
+
+    @allure.step('进入个人中心-黑名单管理')
+    def click_mind_shield_manager(self):
+        self.base.click(mind_downbutton,'mind页')
+        self.base.click_description(mind_people_center,'个人中心')
+        self.base.click_description(mind_shield_manager,'黑名单管理')
+
+    @allure.step('断言拉黑主播存在')
+    def assert_shield_host_exist(self):
+        self.base.assert_image_findit('./aseert_pic/mind_shield_manager.jpg')
+
+    @allure.step('点击移除黑名单用户')
+    def click_shield_host_remove(self):
+        self.base.click_image_findit('./aseert_pic/mind_shield_manager_remove.jpg')
+
+    @allure.step('退出直播间')
+    def click_ele_av_room_top_close(self):
+        self.base.click(ele_av_room_top_close,'离开直播间')
+
+    @allure.step('主播信息卡片-点击举报')
+    def click_ele_hostcard_report(self):
+        self.base.click(ele_hostcard_report,'举报')
+
+    @allure.step('输入举报内容')
+    def input_report_content(self,message):
+        self.base.click('详细描述举报理由...','点击内容')
+        self.base.set_text_FastInputIME(message,message)
+        self.base.back()
+
+    @allure.step('点击提交')
+    def click_report_submit(self):
+        self.base.click_description('提交')
+
+    @allure.step('断言举报成功')
+    def assert_report_success(self):
+        self.base.assert_get_toast_message('举报成功，平台将会在24小时之内给出回复')

@@ -2,20 +2,20 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "主播头像-信息卡片",
+    "name" : "信息卡片-举报主播",
     "children" : [ {
-      "name" : "主播头像-信息卡片",
+      "name" : "信息卡片-举报主播",
       "children" : [ {
-        "name" : "点击主播头像",
+        "name" : "举报主播",
         "children" : [ {
-          "name" : "查看主播信息卡片",
-          "uid" : "94826ae192047ab",
-          "parentUid" : "24e0bedd083fb84e73746fd8976f729d",
-          "status" : "passed",
+          "name" : "举报主播",
+          "uid" : "7077768c10836d3",
+          "parentUid" : "d5f79df39c0633ba77ff5c7db80e4cf1",
+          "status" : "broken",
           "time" : {
-            "start" : 1650019604622,
-            "stop" : 1650019611837,
-            "duration" : 7215
+            "start" : 1650279585647,
+            "stop" : 1650279594875,
+            "duration" : 9228
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,10 +25,10 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "24e0bedd083fb84e73746fd8976f729d"
+        "uid" : "d5f79df39c0633ba77ff5c7db80e4cf1"
       } ],
-      "uid" : "96719006dd527f87f3bc044ffff0e4c4"
+      "uid" : "f223ca8b25458e4a1b7e1f5d77e9e1c1"
     } ],
-    "uid" : "36d7078bb814dd52a9c8ccd98168df18"
+    "uid" : "eb4a4812ba75bec4e0dee14a083a066e"
   } ]
 }

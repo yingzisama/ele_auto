@@ -87,8 +87,8 @@ def adb_screen_shot():
     fail_time = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
     fail_pic = str(fail_time) + "截图.jpg"
     pic_name = os.path.join(screenshots_folder, fail_pic)
-    cmd = 'adb shell /system/bin/screencap -p /sdcard/screenshot.jpg'
+    cmd = 'adb -s '+ device_name +' shell /system/bin/screencap -p /sdcard/screenshot.jpg'
     subprocess.call(cmd,shell=True)
-    cmd = 'adb pull /sdcard/screenshot.jpg {}'.format(pic_name)
+    cmd = 'adb -s '+ device_name +' pull /sdcard/screenshot.jpg {}'.format(pic_name)
     subprocess.call(cmd, shell=True)
     return pic_name

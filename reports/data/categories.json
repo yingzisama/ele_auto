@@ -1,5 +1,30 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: click_description() missing 1 required positional argument: 'log_text'",
+      "children" : [ {
+        "name" : "举报主播",
+        "uid" : "7077768c10836d3",
+        "parentUid" : "5273d54f7c4a6e0410f7625f9992359e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650279585647,
+          "stop" : 1650279594875,
+          "duration" : 9228
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5273d54f7c4a6e0410f7625f9992359e"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
 }
