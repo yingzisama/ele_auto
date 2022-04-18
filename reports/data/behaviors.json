@@ -1,0 +1,34 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "主播头像-信息卡片",
+    "children" : [ {
+      "name" : "主播头像-信息卡片",
+      "children" : [ {
+        "name" : "点击主播头像",
+        "children" : [ {
+          "name" : "查看主播信息卡片",
+          "uid" : "94826ae192047ab",
+          "parentUid" : "24e0bedd083fb84e73746fd8976f729d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1650019604622,
+            "stop" : 1650019611837,
+            "duration" : 7215
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "24e0bedd083fb84e73746fd8976f729d"
+      } ],
+      "uid" : "96719006dd527f87f3bc044ffff0e4c4"
+    } ],
+    "uid" : "36d7078bb814dd52a9c8ccd98168df18"
+  } ]
+}
