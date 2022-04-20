@@ -240,8 +240,12 @@ class Audience(Base):
 
     @allure.step('点击提交')
     def click_report_submit(self):
-        self.base.click_description('提交')
+        self.base.click_description('提交','提交')
 
     @allure.step('断言举报成功')
     def assert_report_success(self):
         self.base.assert_get_toast_message('举报成功，平台将会在24小时之内给出回复')
+
+    @allure.step('点击观众头像')
+    def click_myself_icon(self):
+        self.base.click(ele_visitor_avatar,'观众席自己头像')

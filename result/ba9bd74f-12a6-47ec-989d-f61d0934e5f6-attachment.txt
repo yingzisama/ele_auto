@@ -13,5 +13,6 @@
 [32mINFO    [0m root:base.py:34 点击元素:「点击内容」
 [32mINFO    [0m root:base.py:112 输入文字「主播很色情」
 [32mINFO    [0m root:base.py:218 点击返回
+[32mINFO    [0m root:base.py:52 点击元素:「提交」
 [32mINFO    [0m root:test_audience_host_report.py:19 结束进入直播间
 [32mINFO    [0m root:conftest.py:20 自动化测试结束!

@@ -229,13 +229,12 @@ class Base(object):
 
     def assert_get_toast_message(self,toast_content):
         """
-        页面出现弹窗提示时间，默认时间5s
+        页面出现toast提示时间，默认时间5s
         :param text:弹窗内容
         :return:
         """
-        message = self.d.toast.get_message()
-        assert message == toast_content
-        logger.info("获取toast内容:「{}」".format(message))
+        assert toast_content in self.d.toast.get_message(5.0, default="")
+        logger.info("获取toast内容:「{}」".format(toast_content))
 
     def wait_element_appear(self, element, log_text, timeout=5):
         """

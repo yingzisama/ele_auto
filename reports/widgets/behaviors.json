@@ -4,8 +4,8 @@
     "uid" : "eb4a4812ba75bec4e0dee14a083a066e",
     "name" : "信息卡片-举报主播",
     "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
+      "failed" : 1,
+      "broken" : 0,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,

@@ -1,11 +1,11 @@
 [ {
-  "uid" : "7077768c10836d3",
+  "uid" : "5af9dee82ed6b28c",
   "name" : "举报主播",
   "time" : {
-    "start" : 1650279585647,
-    "stop" : 1650279594875,
-    "duration" : 9228
+    "start" : 1650336880504,
+    "stop" : 1650336894488,
+    "duration" : 13984
   },
-  "status" : "broken",
+  "status" : "failed",
   "severity" : "normal"
 } ]

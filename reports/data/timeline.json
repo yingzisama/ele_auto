@@ -4,16 +4,16 @@
   "children" : [ {
     "name" : "psnopc",
     "children" : [ {
-      "name" : "16092-MainThread",
+      "name" : "19380-MainThread",
       "children" : [ {
         "name" : "举报主播",
-        "uid" : "7077768c10836d3",
-        "parentUid" : "2c29df970864b4373991c80e12895111",
-        "status" : "broken",
+        "uid" : "5af9dee82ed6b28c",
+        "parentUid" : "93a70efa896e56510196cb0dff6bfdd2",
+        "status" : "failed",
         "time" : {
-          "start" : 1650279585647,
-          "stop" : 1650279594875,
-          "duration" : 9228
+          "start" : 1650336880504,
+          "stop" : 1650336894488,
+          "duration" : 13984
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,7 +23,7 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "2c29df970864b4373991c80e12895111"
+      "uid" : "93a70efa896e56510196cb0dff6bfdd2"
     } ],
     "uid" : "6d0a66e85e40290317453efd15256ca5"
   } ]

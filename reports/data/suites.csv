@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Mon Apr 18 18:59:45 CST 2022","Mon Apr 18 18:59:54 CST 2022","9228","testsuites","test_audience_host_report","Test_Audience_Host_Report","","","举报主播",""
+"failed","Tue Apr 19 10:54:40 CST 2022","Tue Apr 19 10:54:54 CST 2022","13984","testsuites","test_audience_host_report","Test_Audience_Host_Report","","","举报主播",""

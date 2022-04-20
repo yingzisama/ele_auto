@@ -9,13 +9,13 @@
         "name" : "Test_Audience_Host_Report",
         "children" : [ {
           "name" : "举报主播",
-          "uid" : "7077768c10836d3",
+          "uid" : "5af9dee82ed6b28c",
           "parentUid" : "a4668c183cb7d48ffcc385e2860b0f46",
-          "status" : "broken",
+          "status" : "failed",
           "time" : {
-            "start" : 1650279585647,
-            "stop" : 1650279594875,
-            "duration" : 9228
+            "start" : 1650336880504,
+            "stop" : 1650336894488,
+            "duration" : 13984
           },
           "flaky" : false,
           "newFailed" : false,

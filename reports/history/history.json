@@ -1,21 +1,21 @@
 {
   "b7280d81ec74a1d4de140ff9c9261fe5" : {
     "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
+      "failed" : 1,
+      "broken" : 0,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7077768c10836d3",
-      "status" : "broken",
-      "statusDetails" : "TypeError: click_description() missing 1 required positional argument: 'log_text'",
+      "uid" : "5af9dee82ed6b28c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: 断言「./aseert_pic/report_toast.png」图片元素不存在!",
       "time" : {
-        "start" : 1650279585647,
-        "stop" : 1650279594875,
-        "duration" : 9228
+        "start" : 1650336880504,
+        "stop" : 1650336894488,
+        "duration" : 13984
       }
     } ]
   }

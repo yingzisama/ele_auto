@@ -2,18 +2,18 @@
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
   "children" : [ {
-    "name" : "Test defects",
+    "name" : "Product defects",
     "children" : [ {
-      "name" : "TypeError: click_description() missing 1 required positional argument: 'log_text'",
+      "name" : "AssertionError: 断言「./aseert_pic/report_toast.png」图片元素不存在!",
       "children" : [ {
         "name" : "举报主播",
-        "uid" : "7077768c10836d3",
-        "parentUid" : "5273d54f7c4a6e0410f7625f9992359e",
-        "status" : "broken",
+        "uid" : "5af9dee82ed6b28c",
+        "parentUid" : "3dcad65ccb5d4b31f2e846a3e17efb62",
+        "status" : "failed",
         "time" : {
-          "start" : 1650279585647,
-          "stop" : 1650279594875,
-          "duration" : 9228
+          "start" : 1650336880504,
+          "stop" : 1650336894488,
+          "duration" : 13984
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,8 +23,8 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "5273d54f7c4a6e0410f7625f9992359e"
+      "uid" : "3dcad65ccb5d4b31f2e846a3e17efb62"
     } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ]
 }
