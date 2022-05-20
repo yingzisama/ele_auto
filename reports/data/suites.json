@@ -4,18 +4,18 @@
   "children" : [ {
     "name" : "testsuites",
     "children" : [ {
-      "name" : "test_audience_host_report",
+      "name" : "test_host_close",
       "children" : [ {
-        "name" : "Test_Audience_Host_Report",
+        "name" : "Test_Live_Close",
         "children" : [ {
-          "name" : "举报主播",
-          "uid" : "5af9dee82ed6b28c",
-          "parentUid" : "a4668c183cb7d48ffcc385e2860b0f46",
-          "status" : "failed",
+          "name" : "直播间关播",
+          "uid" : "5b723d9413eb91fc",
+          "parentUid" : "abfd7a7d03ec180adc4113ac2a9fdd4a",
+          "status" : "passed",
           "time" : {
-            "start" : 1650336880504,
-            "stop" : 1650336894488,
-            "duration" : 13984
+            "start" : 1651117893932,
+            "stop" : 1651117906503,
+            "duration" : 12571
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,9 +25,9 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "a4668c183cb7d48ffcc385e2860b0f46"
+        "uid" : "abfd7a7d03ec180adc4113ac2a9fdd4a"
       } ],
-      "uid" : "6eb540acfc9f377445ae80ca8c28ce49"
+      "uid" : "df425eab63962b2809a835406a4b9c52"
     } ],
     "uid" : "945c4818c7575f0d5b01ddd5c9417c00"
   } ]

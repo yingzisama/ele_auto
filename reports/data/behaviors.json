@@ -2,20 +2,20 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "信息卡片-举报主播",
+    "name" : "直播间关播",
     "children" : [ {
-      "name" : "信息卡片-举报主播",
+      "name" : "直播间关播",
       "children" : [ {
-        "name" : "举报主播",
+        "name" : "直播间关播",
         "children" : [ {
-          "name" : "举报主播",
-          "uid" : "5af9dee82ed6b28c",
-          "parentUid" : "d5f79df39c0633ba77ff5c7db80e4cf1",
-          "status" : "failed",
+          "name" : "直播间关播",
+          "uid" : "5b723d9413eb91fc",
+          "parentUid" : "89c6709fa8bc22636700ad1813a4db4e",
+          "status" : "passed",
           "time" : {
-            "start" : 1650336880504,
-            "stop" : 1650336894488,
-            "duration" : 13984
+            "start" : 1651117893932,
+            "stop" : 1651117906503,
+            "duration" : 12571
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,10 +25,10 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "d5f79df39c0633ba77ff5c7db80e4cf1"
+        "uid" : "89c6709fa8bc22636700ad1813a4db4e"
       } ],
-      "uid" : "f223ca8b25458e4a1b7e1f5d77e9e1c1"
+      "uid" : "2846831dc2e4b4967c266f2a00b6b6d1"
     } ],
-    "uid" : "eb4a4812ba75bec4e0dee14a083a066e"
+    "uid" : "965953d4b5d4c19e2ef8099e00078823"
   } ]
 }

@@ -249,3 +249,4 @@ class Audience(Base):
     @allure.step('点击观众头像')
     def click_myself_icon(self):
         self.base.click(ele_visitor_avatar,'观众席自己头像')
+

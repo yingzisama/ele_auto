@@ -1,11 +1,11 @@
 [ {
-  "uid" : "5af9dee82ed6b28c",
-  "name" : "举报主播",
+  "uid" : "5b723d9413eb91fc",
+  "name" : "直播间关播",
   "time" : {
-    "start" : 1650336880504,
-    "stop" : 1650336894488,
-    "duration" : 13984
+    "start" : 1651117893932,
+    "stop" : 1651117906503,
+    "duration" : 12571
   },
-  "status" : "failed",
+  "status" : "passed",
   "severity" : "normal"
 } ]

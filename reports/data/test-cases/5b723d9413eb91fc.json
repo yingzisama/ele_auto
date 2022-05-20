@@ -1,0 +1,178 @@
+{
+  "uid" : "5b723d9413eb91fc",
+  "name" : "直播间关播",
+  "fullName" : "testsuites.test_host_close.Test_Live_Close#test_live_set_title",
+  "historyId" : "62a9105e48baeb45f0e28ee7568dc712",
+  "time" : {
+    "start" : 1651117893932,
+    "stop" : 1651117906503,
+    "duration" : 12571
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "driver_setup",
+    "time" : {
+      "start" : 1651117888022,
+      "stop" : 1651117893561,
+      "duration" : 5539
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_host",
+    "time" : {
+      "start" : 1651117893561,
+      "stop" : 1651117893930,
+      "duration" : 369
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "创建直播间",
+      "time" : {
+        "start" : 1651117893932,
+        "stop" : 1651117903340,
+        "duration" : 9408
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "关闭直播间",
+      "time" : {
+        "start" : 1651117903340,
+        "stop" : 1651117904673,
+        "duration" : 1333
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "9667076513733209",
+      "name" : "log",
+      "source" : "9667076513733209.txt",
+      "type" : "text/plain",
+      "size" : 1157
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 2,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "init_host::0",
+    "time" : {
+      "start" : 1651117906503,
+      "stop" : 1651117906504,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver_setup::driver_teardown",
+    "time" : {
+      "start" : 1651117906505,
+      "stop" : 1651117906631,
+      "duration" : 126
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "直播间关播"
+  }, {
+    "name" : "story",
+    "value" : "直播间关播"
+  }, {
+    "name" : "feature",
+    "value" : "直播间关播"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('driver_setup')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testsuites"
+  }, {
+    "name" : "suite",
+    "value" : "test_host_close"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Live_Close"
+  }, {
+    "name" : "host",
+    "value" : "psnopc"
+  }, {
+    "name" : "thread",
+    "value" : "21808-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testsuites.test_host_close"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('driver_setup')" ]
+  },
+  "source" : "5b723d9413eb91fc.json",
+  "parameterValues" : [ ]
+}

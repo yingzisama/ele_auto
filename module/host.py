@@ -91,13 +91,13 @@ class Host(Base):
         self.base.wait_element_appear(tiv_live,tiv_live,1)
         self.base.click(tiv_live,tiv_live)
         self.base.click(preview_start,preview_start)
-        self.base.wait_time()
+        self.base.wait_time(6)
 
     @allure.step("关闭直播间")
     def close_liveroom(self):
         self.base.click(av_room_top_close,av_room_top_close)
         self.base.wait_element_appear(close_live,close_live,1)
-        self.base.click(close_live,av_room_top_close)
+        self.base.click(close_live,close_live)
 
     @allure.step("点击主播头像")
     def click_user_avatar(self):

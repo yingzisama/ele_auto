@@ -1,6 +1,7 @@
 # coding:gbk
 import requests
 import json
+import datetime
 
 class AdminRequest:
     @staticmethod
@@ -32,4 +33,7 @@ class AdminRequest:
 if __name__=='__main__':
     cookie1 = AdminRequest.login()
     list_feed = AdminRequest.get_feedback(cookie1)
-    print(list_feed)
+    print(type(list_feed))
+    now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    print(type(now_time))
+    

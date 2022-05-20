@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Tue Apr 19 10:54:40 CST 2022","Tue Apr 19 10:54:54 CST 2022","13984","testsuites","test_audience_host_report","Test_Audience_Host_Report","","","举报主播",""
+"passed","Thu Apr 28 11:51:33 CST 2022","Thu Apr 28 11:51:46 CST 2022","12571","testsuites","test_host_close","Test_Live_Close","","","直播间关播",""
