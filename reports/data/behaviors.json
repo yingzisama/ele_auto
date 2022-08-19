@@ -2,20 +2,20 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "直播间关播",
+    "name" : "送礼-象豆类型礼物",
     "children" : [ {
-      "name" : "直播间关播",
+      "name" : "送礼-象豆类型礼物",
       "children" : [ {
-        "name" : "直播间关播",
+        "name" : "赠送象豆类型礼物",
         "children" : [ {
-          "name" : "直播间关播",
-          "uid" : "5b723d9413eb91fc",
-          "parentUid" : "89c6709fa8bc22636700ad1813a4db4e",
+          "name" : "赠送象豆类型礼物",
+          "uid" : "31bfbf62e9555828",
+          "parentUid" : "f3e955e0f9aac6ac7200544e604ec5ab",
           "status" : "passed",
           "time" : {
-            "start" : 1651117893932,
-            "stop" : 1651117906503,
-            "duration" : 12571
+            "start" : 1660814790100,
+            "stop" : 1660814803817,
+            "duration" : 13717
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,10 +25,10 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "89c6709fa8bc22636700ad1813a4db4e"
+        "uid" : "f3e955e0f9aac6ac7200544e604ec5ab"
       } ],
-      "uid" : "2846831dc2e4b4967c266f2a00b6b6d1"
+      "uid" : "5004c290e38c1e94b67743bd8a0a774e"
     } ],
-    "uid" : "965953d4b5d4c19e2ef8099e00078823"
+    "uid" : "7d9ff86f9bd1e863a53e71e5e1b5f002"
   } ]
 }

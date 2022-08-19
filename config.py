@@ -3,7 +3,7 @@ import os
 
 # 全局配置
 pck_name = "com.yiwuzhibo"   # 包名
-device_name = "A3KUUT2113000390"  # 设备名
+device_name = "bc5a8356"  # 设备名
 wait_timeout = 20
 launch_time = 4
 current_path = os.path.abspath(os.path.dirname(__file__))

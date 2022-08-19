@@ -1,8 +1,8 @@
-# # coding: gbk
-# #
-# import uiautomator2 as u2
+# coding: gbk
+#
+import uiautomator2 as u2
 
-# d = u2.connect('A3KUUT2113000390')
+d = u2.connect('bc5a8356')
 
-# im = d(descriptionContains="×Ô¶¯»¯²âÊÔ").screenshot()
-# im.save(r'D:\workspace_new\uiauto2_ele\aseert_pic\mind_shield_manager.jpg')
+im = d.xpath('//*[@resource-id="com.yiwuzhibo:id/liveroom_im_list"]/android.view.ViewGroup[4]').screenshot()
+im.save(r'D:\workspace_new\uiauto2_ele\aseert_pic\send_gift.jpg')

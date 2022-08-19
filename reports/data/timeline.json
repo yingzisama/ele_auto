@@ -4,16 +4,16 @@
   "children" : [ {
     "name" : "psnopc",
     "children" : [ {
-      "name" : "21808-MainThread",
+      "name" : "31540-MainThread",
       "children" : [ {
-        "name" : "直播间关播",
-        "uid" : "5b723d9413eb91fc",
-        "parentUid" : "a8474846872f5ba858df835e580122e9",
+        "name" : "赠送象豆类型礼物",
+        "uid" : "31bfbf62e9555828",
+        "parentUid" : "b8d7cb1c3295bb2bd816ad43711a1471",
         "status" : "passed",
         "time" : {
-          "start" : 1651117893932,
-          "stop" : 1651117906503,
-          "duration" : 12571
+          "start" : 1660814790100,
+          "stop" : 1660814803817,
+          "duration" : 13717
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,7 +23,7 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a8474846872f5ba858df835e580122e9"
+      "uid" : "b8d7cb1c3295bb2bd816ad43711a1471"
     } ],
     "uid" : "6d0a66e85e40290317453efd15256ca5"
   } ]

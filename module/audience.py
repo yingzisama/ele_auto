@@ -5,13 +5,11 @@ import allure
 logger = JFMlogging().getloger()
 
 #搜索按钮
-ele_iv_search = 'com.yiwuzhibo:id/iv_search'
+ele_iv_search = 'com.yiwuzhibo:id/icon_fun1'
 #搜索框
 ele_et_search = 'com.yiwuzhibo:id/et_search'
 #主播名字
-ele_host_name = '自动化测试主播端'
-#搜索按钮
-ele_btn_search = 'com.yiwuzhibo:id/btn_search'
+ele_host_name = 'com.yiwuzhibo:id/iv_avatar'
 #主播昵称
 ele_liveroom_streamer_name = 'com.yiwuzhibo:id/liveroom_streamer_name'
 #主播头像
@@ -34,11 +32,26 @@ ele_liveroom_play_share = 'com.yiwuzhibo:id/liveroom_play_share'
 ele_liveroom_play_private_chat = 'com.yiwuzhibo:id/liveroom_play_private_chat'
 #更多按钮
 ele_liveroom_play_fun_more = 'com.yiwuzhibo:id/liveroom_play_fun_more'
-#礼物按钮
-ele_liveroom_play_gift = 'com.yiwuzhibo:id/liveroom_play_gift'
+# 礼物按钮
+ele_liveroom_gift_button = 'com.yiwuzhibo:id/liveroom_play_gift'
+# 榜单(人气榜,魅力榜，PK榜，周星榜)
+ele_liveroom_rank_1_content = 'com.yiwuzhibo:id/tv_content'
+# 普通小象币礼物
+ele_liveroom_common_coin_gift = '啾咪'
+# 礼物栏-象豆tab
+ele_liveroom_bean_tab = '象豆'
+# 普通象豆礼物
+ele_liveroom_common_bean_gift = '蛋卷寿司'
+# 礼物栏-赠送按钮
+ele_liveroom_gift_sent_button = '赠送'
+# 礼物栏-批量赠送选择入口
+ele_liveroom_gift_sent_batch = 'com.yiwuzhibo:id/gift_send_quantity_iv'
+# 礼物栏-批量赠送选择66
+ele_liveroom_gift_sent_batch66 = '//*[@resource-id="com.yiwuzhibo:id/count_tv_container"]/android.widget.TextView[5]'
+# 礼物栏-combo按钮
+ele_liveroom_gift_sent_combo = 'com.yiwuzhibo:id/text_combo'
 #退出按钮
 ele_av_room_top_close = 'com.yiwuzhibo:id/av_room_top_close'
-
 #主播信息卡片-主播头像
 ele_hostcard_user_avatar = 'com.yiwuzhibo:id/user_avatar'
 #主播信息卡片-主播昵称
@@ -89,8 +102,8 @@ class Audience(Base):
     @allure.step("进入直播间")
     def enter_live_room(self):
         self.base.click(ele_iv_search,'搜索按钮')
-        self.base.send_keys(ele_et_search,'自动化测试','输入搜索内容-自动化测试')
-        self.base.click(ele_btn_search,'搜索按钮')
+        self.base.send_keys(ele_et_search,'10003294','输入搜索内容-10003294')
+        self.base.enter()
         self.base.click(ele_host_name,'点击直播间')
 
     @allure.step('断言直播间观众端界面正常展示')
@@ -117,8 +130,6 @@ class Audience(Base):
         self.base.assert_element_exist(ele_liveroom_play_private_chat)
         #断言直播间更多按钮存在
         self.base.assert_element_exist(ele_liveroom_play_fun_more)
-        #断言直播间礼物按钮存在
-        self.base.assert_element_exist(ele_liveroom_play_gift)
         #断言直播间关闭按钮存在
         self.base.assert_element_exist(ele_av_room_top_close)
 
@@ -250,3 +261,53 @@ class Audience(Base):
     def click_myself_icon(self):
         self.base.click(ele_visitor_avatar,'观众席自己头像')
 
+    @allure.step('点击打开礼物面板')
+    def live_click_gift_button(self):
+        self.base.click(ele_liveroom_gift_button,'打开礼物面板')
+
+    @allure.step('赠送小象币礼物-啾咪')
+    def live_click_10coin_gift(self):
+        self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('赠送象豆礼物-蛋卷寿司')
+    def live_click_20bean_gift(self):
+        self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
+        self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('赠送小象币礼物combo-啾咪')
+    def live_click_10coin_gift_combo(self):
+        self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+        self.base.click(ele_liveroom_gift_sent_combo,'点击combo赠送')
+
+    @allure.step('赠送象豆礼物combo-蛋卷寿司')
+    def live_click_20bean_gift_combo(self):
+        self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
+        self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+        self.base.click(ele_liveroom_gift_sent_combo,'点击combo赠送')
+
+    @allure.step('断言礼物栏-余额')
+    def assert_gift_balance(self,num):
+        self.base.assert_exist(num)
+
+    @allure.step('断言-评论区出现送礼消息')
+    def assert_gift_message(self):
+        self.base.assert_image_findit('./aseert_pic/send_gift.png')
+
+    @allure.step('批量送礼-啾咪')
+    def live_click_10coin_gift_batch66(self):
+        self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
+        self.base.click(ele_liveroom_gift_sent_batch,'点出批量选择')
+        self.base.click(ele_liveroom_gift_sent_batch66,'选择批量数66')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('批量赠送象豆礼物-蛋卷寿司')
+    def live_click_20bean_gift_batch66(self):
+        self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
+        self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
+        self.base.click(ele_liveroom_gift_sent_batch,'点出批量选择')
+        self.base.click(ele_liveroom_gift_sent_batch66,'选择批量数66')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')

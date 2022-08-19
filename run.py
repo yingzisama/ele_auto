@@ -24,5 +24,7 @@ def init_report():
 
 # init_env()
 # pytest.main(["-s", "testsuites", "--alluredir=./result/","--clean-alluredir"])
-pytest.main(["-s", "testsuites/test_host_close.py", "--alluredir=./result/","--clean-alluredir"])
+# pytest.main(["-s", "testsuites/test_host_close.py", "--alluredir=./result/","--clean-alluredir"])
+# pytest.main(["-s", "testsuites_new", "--alluredir=./result/","--clean-alluredir"])
+pytest.main(["-s", "testsuites_new/test_gift_send_bean.py", "--alluredir=./result/","--clean-alluredir"])
 init_report()

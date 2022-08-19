@@ -2,16 +2,16 @@
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "name" : "packages",
   "children" : [ {
-    "name" : "testsuites.test_host_close",
+    "name" : "testsuites_new.test_gift_send_bean",
     "children" : [ {
-      "name" : "直播间关播",
-      "uid" : "5b723d9413eb91fc",
-      "parentUid" : "0271579ee9df422240652d4357408f8f",
+      "name" : "赠送象豆类型礼物",
+      "uid" : "31bfbf62e9555828",
+      "parentUid" : "5375107ffeb930c8cc041c613d7140fe",
       "status" : "passed",
       "time" : {
-        "start" : 1651117893932,
-        "stop" : 1651117906503,
-        "duration" : 12571
+        "start" : 1660814790100,
+        "stop" : 1660814803817,
+        "duration" : 13717
       },
       "flaky" : false,
       "newFailed" : false,
@@ -21,6 +21,6 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "testsuites.test_host_close"
+    "uid" : "testsuites_new.test_gift_send_bean"
   } ]
 }

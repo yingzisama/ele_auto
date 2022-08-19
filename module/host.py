@@ -81,6 +81,8 @@ nose_face = 'Êİ±Ç'
 #×ìĞÍ
 mouth_face = '×ìĞÍ'
 
+
+
 class Host(Base):
     def __init__(self,driver):
         self.base = Base(driver)
@@ -232,3 +234,7 @@ class Host(Base):
     @allure.step('µã»÷ºìÈó')
     def live_click_ruddy(self):
         self.base.click(ruddy_live,ruddy_live)
+
+
+
+    

@@ -11,3 +11,14 @@ testsuites/test_mind_personal_check.py::Test_Mind_Personal_Check::test_mind_pers
 testsuites/test_host_close.py::Test_Live_Close::test_live_set_title
 testsuites/test_host_close.py::Test_Live_Close::test_live_set_title
 testsuites/test_host_close.py::Test_Live_Close::test_live_set_title
+testsuites_new/test_gift_send_coin.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_coin.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_coin.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_coin.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_coin.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_coin.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_bean.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_bean.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_bean.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_bean.py::Test_Gift_Sent_Common::test_audience_sentgift_coin
+testsuites_new/test_gift_send_bean.py::Test_Gift_Sent_Common::test_audience_sentgift_coin

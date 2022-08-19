@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Apr 28 11:51:33 CST 2022","Thu Apr 28 11:51:46 CST 2022","12571","testsuites","test_host_close","Test_Live_Close","","","直播间关播",""
+"passed","Thu Aug 18 17:26:30 CST 2022","Thu Aug 18 17:26:43 CST 2022","13717","testsuites_new","test_gift_send_bean","Test_Gift_Sent_Common","","","赠送象豆类型礼物",""

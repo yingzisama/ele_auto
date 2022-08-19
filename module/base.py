@@ -217,6 +217,14 @@ class Base(object):
         self.d.press("back")
         logger.info("点击返回")
 
+    def enter(self):
+        """
+        模拟物理键确认
+        :return:
+        """
+        self.d.press("enter")
+        logger.info("点击确认")
+
     def toast_show(self, text, duration=5):
         """
         页面出现弹窗提示时间，默认时间5s
