@@ -1,6 +1,9 @@
 # coding:gbk
 import requests
 import pymysql
+from config import *
+
+userId = '11839791'
 
 class ele_function:
     @staticmethod
@@ -30,7 +33,6 @@ class ele_function:
         count.ping(reconnect = True)
         # 完成mysql数据库实例化
         db1 = count.cursor()
-        userId = 'Test12230543'
         db1.execute("update account.wallet_info set contributions_balance = '%s' where user_id = '%s'" % (ele_coin,userId))
         count.commit()
         # 查找所以内容
@@ -48,7 +50,6 @@ class ele_function:
         db= '',  
         charset = 'gbk'     
         )
-        userId = 'Test12230543'
         count.ping(reconnect = True)
         # 完成mysql数据库实例化
         db1 = count.cursor()

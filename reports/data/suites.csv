@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Aug 18 17:26:30 CST 2022","Thu Aug 18 17:26:43 CST 2022","13717","testsuites_new","test_gift_send_bean","Test_Gift_Sent_Common","","","赠送象豆类型礼物",""
+"passed","Fri Aug 26 11:57:55 CST 2022","Fri Aug 26 11:58:13 CST 2022","17727","testsuites_new","test_012_gift_send_graffiti","Test_Gift_Sent_Graffiti","","","涂鸦礼物",""

@@ -38,10 +38,32 @@ ele_liveroom_gift_button = 'com.yiwuzhibo:id/liveroom_play_gift'
 ele_liveroom_rank_1_content = 'com.yiwuzhibo:id/tv_content'
 # 普通小象币礼物
 ele_liveroom_common_coin_gift = '啾咪'
+# 成长类礼物
+ele_liveroom_grow_gift = '玫瑰'
+# 成长类礼物-玫瑰花丛
+ele_liveroom_grow_gift_bigmeigui = '玫瑰花丛'
 # 礼物栏-象豆tab
 ele_liveroom_bean_tab = '象豆'
+# 礼物栏-小象tab
+ele_liveroom_ele_tab = '小象'
+# 礼物栏-趣味tab
+ele_liveroom_quwei_tab = '趣味'
+# 礼物栏-热门tab
+ele_liveroom_hot_tab = '热门'
+# 礼物栏-特权tab
+ele_liveroom_tequan_tab = '特权'
 # 普通象豆礼物
 ele_liveroom_common_bean_gift = '蛋卷寿司'
+# 滤镜礼物
+ele_liveroom_filter_gift = '春田花花'
+# 游戏礼物
+ele_liveroom_game_gift = '金足球'
+# 粉丝团礼物
+ele_liveroom_fans_gift = '粉丝团'
+# 涂鸦礼物
+ele_liveroom_graffiti_gift = '比心'
+# 涂鸦区域
+ele_liveroom_graffiti_center = 'com.yiwuzhibo:id/doddle_view'
 # 礼物栏-赠送按钮
 ele_liveroom_gift_sent_button = '赠送'
 # 礼物栏-批量赠送选择入口
@@ -50,49 +72,49 @@ ele_liveroom_gift_sent_batch = 'com.yiwuzhibo:id/gift_send_quantity_iv'
 ele_liveroom_gift_sent_batch66 = '//*[@resource-id="com.yiwuzhibo:id/count_tv_container"]/android.widget.TextView[5]'
 # 礼物栏-combo按钮
 ele_liveroom_gift_sent_combo = 'com.yiwuzhibo:id/text_combo'
-#退出按钮
+# 退出按钮
 ele_av_room_top_close = 'com.yiwuzhibo:id/av_room_top_close'
-#主播信息卡片-主播头像
+# 主播信息卡片-主播头像
 ele_hostcard_user_avatar = 'com.yiwuzhibo:id/user_avatar'
-#主播信息卡片-主播昵称
+# 主播信息卡片-主播昵称
 ele_hostcard_nickname = 'com.yiwuzhibo:id/av_room_person_name'
-#主播信息卡片-小象号
+# 主播信息卡片-小象号
 ele_hostcard_uid = 'com.yiwuzhibo:id/ll_room_person_uid'
-#主播信息卡片-更多按钮
+# 主播信息卡片-更多按钮
 ele_hostcard_more = 'com.yiwuzhibo:id/av_room_person_manager'
-#主播信息卡片-举报
+# 主播信息卡片-举报
 ele_hostcard_report = 'com.yiwuzhibo:id/av_room_person_report'
-#主播信息卡片-用户等级
+# 主播信息卡片-用户等级
 ele_hostcard_level = 'com.yiwuzhibo:id/av_room_person_tag'
-#主播信息卡片-个人签名
+# 主播信息卡片-个人签名
 ele_hostcard_sign = 'com.yiwuzhibo:id/av_room_person_sign'
-#主播信息卡片-粉丝数
+# 主播信息卡片-粉丝数
 ele_hostcard_fans = 'com.yiwuzhibo:id/av_room_person_detail_fans'
-#主播信息卡片-关注数
+# 主播信息卡片-关注数
 ele_hostcard_follower = 'com.yiwuzhibo:id/av_room_person_detail_follower'
-#主播信息卡片-送出数
+# 主播信息卡片-送出数
 ele_hostcard_send = 'com.yiwuzhibo:id/av_room_person_detail_send'
-#主播信息卡片-收到数
+# 主播信息卡片-收到数
 ele_hostcard_get = 'com.yiwuzhibo:id/av_room_person_detail_get'
-#主播信息卡片-主页
+# 主播信息卡片-主页
 ele_hostcard_homepage = 'com.yiwuzhibo:id/av_room_person_detail_main'
-#主播信息卡片-@
+# 主播信息卡片-@
 ele_hostcard_eit = 'com.yiwuzhibo:id/av_room_person_detail_at'
-#主播信息卡片-关注
+# 主播信息卡片-关注
 ele_hostcard_focus = 'com.yiwuzhibo:id/av_room_person_detail_focus'
-#主播信息卡片-好友
+# 主播信息卡片-好友
 ele_hostcard_friend_status = 'com.yiwuzhibo:id/av_room_friend_status'
-#主播信息卡片-拉黑
+# 主播信息卡片-拉黑
 ele_hostcard_shield = '拉黑'
-#拉黑-确定
+# 拉黑-确定
 ele_hostcard_shield_comfirm = 'com.yiwuzhibo:id/tv_comfirm'
-#发言栏-发送
+# 发言栏-发送
 ele_input_confirm_tv = 'com.yiwuzhibo:id/input_confirm_tv'
-#Mind页
+# Mind页
 mind_downbutton = '//*[@resource-id="com.yiwuzhibo:id/tab_layout"]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[5]'
-#个人中心
+# 个人中心
 mind_people_center = '个人中心'
-#黑名单管理
+# 黑名单管理
 mind_shield_manager = '黑名单管理'
 
 class Audience(Base):
@@ -102,7 +124,7 @@ class Audience(Base):
     @allure.step("进入直播间")
     def enter_live_room(self):
         self.base.click(ele_iv_search,'搜索按钮')
-        self.base.send_keys(ele_et_search,'10003294','输入搜索内容-10003294')
+        self.base.send_keys(ele_et_search,'12229221','输入搜索内容-12229221')
         self.base.enter()
         self.base.click(ele_host_name,'点击直播间')
 
@@ -276,6 +298,49 @@ class Audience(Base):
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
 
+    @allure.step('赠送成长礼物-玫瑰')
+    def live_click_2coin_grow_gift(self):
+        self.base.click(ele_liveroom_quwei_tab,'点击切换到礼物-趣味tab')
+        self.base.click(ele_liveroom_grow_gift,'点击成长礼物-玫瑰')
+        self.base.wait_time(1)
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('赠送成长礼物-玫瑰100次')
+    def live_click_100_grow_gift(self):
+        self.base.click(ele_liveroom_quwei_tab,'点击切换到礼物-趣味tab')
+        self.base.click(ele_liveroom_grow_gift,'点击成长礼物-玫瑰')
+        self.base.wait_time(1)
+        self.base.click_more(ele_liveroom_gift_sent_button,100,'点击赠送')
+
+    @allure.step('断言-玫瑰花丛(解锁)存在')
+    def assert_big_meigui(self):
+        self.base.assert_image_findit('./aseert_pic/big_meigui.jpg')
+
+    @allure.step('赠送成长礼物-玫瑰花丛')
+    def live_click_grow_gift_bigmeigui(self):
+        self.base.click(ele_liveroom_grow_gift_bigmeigui,'点击成长礼物-玫瑰花丛')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('赠送滤镜礼物-春田花花')
+    def live_click_filter_gift(self):
+        self.base.click(ele_liveroom_quwei_tab,'点击切换到礼物-趣味tab')
+        self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
+        self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
+        self.base.click(ele_liveroom_filter_gift,'点击滤镜礼物-春田花花')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('赠送游戏礼物-金足球')
+    def live_click_game_gift(self):
+        self.base.click(ele_liveroom_hot_tab,'点击切换到礼物-热门tab')
+        self.base.click(ele_liveroom_game_gift,'点击游戏礼物-金足球')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('赠送粉丝团礼物-粉丝团')
+    def live_click_fans_gift(self):
+        self.base.click(ele_liveroom_tequan_tab,'点击切换到礼物-特权tab')
+        self.base.click(ele_liveroom_fans_gift,'点击游戏礼物-粉丝团')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
     @allure.step('赠送小象币礼物combo-啾咪')
     def live_click_10coin_gift_combo(self):
         self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
@@ -288,6 +353,13 @@ class Audience(Base):
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
         self.base.click(ele_liveroom_gift_sent_combo,'点击combo赠送')
+
+    @allure.step('赠送涂鸦礼物-比心')
+    def live_click_graffiti_gift(self):
+        self.base.click(ele_liveroom_ele_tab,'点击礼物栏-小象tab')
+        self.base.click(ele_liveroom_graffiti_gift,'点击礼物-比心')
+        self.base.click_more(ele_liveroom_graffiti_center,10,'点击涂鸦区域10次')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
 
     @allure.step('断言礼物栏-余额')
     def assert_gift_balance(self,num):

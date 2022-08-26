@@ -4,18 +4,18 @@
   "children" : [ {
     "name" : "testsuites_new",
     "children" : [ {
-      "name" : "test_gift_send_bean",
+      "name" : "test_012_gift_send_graffiti",
       "children" : [ {
-        "name" : "Test_Gift_Sent_Common",
+        "name" : "Test_Gift_Sent_Graffiti",
         "children" : [ {
-          "name" : "赠送象豆类型礼物",
-          "uid" : "31bfbf62e9555828",
-          "parentUid" : "dbcba36f82821f03a09444e3eccdb86e",
+          "name" : "涂鸦礼物",
+          "uid" : "959a8c1dcf87a094",
+          "parentUid" : "9cdfc3d1c3656e055e6b42e6d5a94ee2",
           "status" : "passed",
           "time" : {
-            "start" : 1660814790100,
-            "stop" : 1660814803817,
-            "duration" : 13717
+            "start" : 1661486275972,
+            "stop" : 1661486293699,
+            "duration" : 17727
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,9 +25,9 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "dbcba36f82821f03a09444e3eccdb86e"
+        "uid" : "9cdfc3d1c3656e055e6b42e6d5a94ee2"
       } ],
-      "uid" : "03f84ddd1d3f13c04b71cf29851df8cc"
+      "uid" : "eaf6db15d7fef4246eec19e5feefe3da"
     } ],
     "uid" : "9ce645e55721164e285dec635474a475"
   } ]

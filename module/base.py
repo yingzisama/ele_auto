@@ -33,6 +33,30 @@ class Base(object):
             self.d(text=element).click()
         logger.info("点击元素:「{}」".format(log_text))
 
+    def click_more(self, element, num, log_text):
+        """
+        元素点击多次
+        element:元素名称
+        num:点击次数
+        log_text:打印log的文案
+        xpath使用方法
+        1.包含
+        d.xpath(u"//android.widget.TextView[contains(@text,'购买 ?0?6')]").click()
+        2.全匹配
+        d.xpath(u"//android.widget.TextView[@text='购买 ?0?64.99']").click()
+        3.匹配开始字符
+        d.xpath(u"//android.widget.TextView[starts-with(@text,'购买 ?0?6')]").click()
+        :return:
+        """
+        for i in range(num):
+            if str(element).startswith("com"):
+                self.d(resourceId=element).click()
+            elif re.findall("//", str(element)):
+                self.d.xpath(element).click()
+            else:
+                self.d(text=element).click()
+        logger.info("点击元素:「{}」「{}」次 ".format(log_text,num))
+
     def click_text_contains(self,element,log_text):
         """
         部分text元素点击
@@ -395,7 +419,7 @@ class Base(object):
         :return:
         """
         image_dict = self.d.image.match(image_url)
-        assert image_dict['similarity'] >= 0.99,"断言「{}」图片元素不存在!".format(image_url)
+        assert image_dict['similarity'] >= 0.98,"断言「{}」图片元素不存在!相似度为「{}」".format(image_url,image_dict['similarity'])
         logger.info("断言「{}」图片元素存在!".format(image_url))
 
     def assert_not_image_findit(self, image_url):
