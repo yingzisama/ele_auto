@@ -38,6 +38,8 @@ ele_liveroom_gift_button = 'com.yiwuzhibo:id/liveroom_play_gift'
 ele_liveroom_rank_1_content = 'com.yiwuzhibo:id/tv_content'
 # 普通小象币礼物
 ele_liveroom_common_coin_gift = '啾咪'
+# 礼物栏-背包
+ele_liveroom_backpack = 'com.yiwuzhibo:id/package_button'
 # 成长类礼物
 ele_liveroom_grow_gift = '玫瑰'
 # 成长类礼物-玫瑰花丛
@@ -48,14 +50,20 @@ ele_liveroom_bean_tab = '象豆'
 ele_liveroom_ele_tab = '小象'
 # 礼物栏-趣味tab
 ele_liveroom_quwei_tab = '趣味'
+# 礼物栏-浪漫tab
+ele_liveroom_langman_tab = '浪漫'
 # 礼物栏-热门tab
 ele_liveroom_hot_tab = '热门'
 # 礼物栏-特权tab
 ele_liveroom_tequan_tab = '特权'
 # 普通象豆礼物
 ele_liveroom_common_bean_gift = '蛋卷寿司'
+# 象豆礼物-拳套
+ele_liveroom_backpack_coin_gift = '拳套'
 # 滤镜礼物
 ele_liveroom_filter_gift = '春田花花'
+# 横幅礼物
+ele_liveroom_rocket_gift = '王者归来'
 # 游戏礼物
 ele_liveroom_game_gift = '金足球'
 # 粉丝团礼物
@@ -289,11 +297,13 @@ class Audience(Base):
 
     @allure.step('赠送小象币礼物-啾咪')
     def live_click_10coin_gift(self):
+        self.base.click(ele_liveroom_ele_tab,'点击礼物栏-小象tab')
         self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
 
     @allure.step('赠送象豆礼物-蛋卷寿司')
     def live_click_20bean_gift(self):
+        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
         self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
@@ -310,6 +320,7 @@ class Audience(Base):
         self.base.click(ele_liveroom_quwei_tab,'点击切换到礼物-趣味tab')
         self.base.click(ele_liveroom_grow_gift,'点击成长礼物-玫瑰')
         self.base.wait_time(1)
+        self.base.click(ele_liveroom_grow_gift,'点击成长礼物-玫瑰')
         self.base.click_more(ele_liveroom_gift_sent_button,100,'点击赠送')
 
     @allure.step('断言-玫瑰花丛(解锁)存在')
@@ -329,6 +340,15 @@ class Audience(Base):
         self.base.click(ele_liveroom_filter_gift,'点击滤镜礼物-春田花花')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
 
+    @allure.step('赠送横幅-王者归来')
+    def live_click_rocket_gift(self):
+        self.base.click(ele_liveroom_langman_tab,'点击切换到礼物-趣味tab')
+        self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
+        self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
+        self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
+        self.base.click(ele_liveroom_rocket_gift,'点击横幅礼物-王者归来')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
     @allure.step('赠送游戏礼物-金足球')
     def live_click_game_gift(self):
         self.base.click(ele_liveroom_hot_tab,'点击切换到礼物-热门tab')
@@ -341,14 +361,28 @@ class Audience(Base):
         self.base.click(ele_liveroom_fans_gift,'点击游戏礼物-粉丝团')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
 
+    @allure.step('赠送背包-象币礼物')
+    def live_click_backpack_coin_gift(self):
+        self.base.click(ele_liveroom_backpack,'点击切换到背包')
+        self.base.click(ele_liveroom_backpack_coin_gift,'点击背包-象币礼物')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('赠送背包-象豆礼物')
+    def live_click_backpack_bean_gift(self):
+        self.base.click(ele_liveroom_backpack,'点击切换到背包')
+        self.base.click(ele_liveroom_common_bean_gift,'点击背包-象豆礼物')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
     @allure.step('赠送小象币礼物combo-啾咪')
     def live_click_10coin_gift_combo(self):
+        self.base.click(ele_liveroom_ele_tab,'点击礼物栏-小象tab')
         self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
         self.base.click(ele_liveroom_gift_sent_combo,'点击combo赠送')
 
     @allure.step('赠送象豆礼物combo-蛋卷寿司')
     def live_click_20bean_gift_combo(self):
+        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
         self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
@@ -371,6 +405,7 @@ class Audience(Base):
 
     @allure.step('批量送礼-啾咪')
     def live_click_10coin_gift_batch66(self):
+        self.base.click(ele_liveroom_ele_tab,'点击礼物栏-小象tab')
         self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
         self.base.click(ele_liveroom_gift_sent_batch,'点出批量选择')
         self.base.click(ele_liveroom_gift_sent_batch66,'选择批量数66')
@@ -378,6 +413,7 @@ class Audience(Base):
 
     @allure.step('批量赠送象豆礼物-蛋卷寿司')
     def live_click_20bean_gift_batch66(self):
+        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
         self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_batch,'点出批量选择')

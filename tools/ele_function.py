@@ -1,17 +1,19 @@
 # coding:gbk
 import requests
 import pymysql
-from config import *
+import json
+import redis
 
 userId = '11839791'
 
 class ele_function:
     @staticmethod
     def login():
-        url = 'http://showmetest-2011.elelive.cn:10009/login'
+        now_host = 'http://showmetest3.elelive.cn:10009'
+        url = now_host+'/login'
         data = {
-            'smsCode':'1234',
-            'userCode':'admin'
+        'smsCode':'1234',
+        'userCode':'Fish'
         }
         res = requests.post(url,data=data)
         cookies = res.cookies
@@ -65,6 +67,56 @@ class ele_function:
         db1.execute("update wallet.wallet_9 set balance = '%s' where user_id = '%s'" % (ele_coin,userId))
         count.commit()
 
+    @staticmethod
+    def grow_clear():
+        '''清除用户的11839791的玫瑰成长礼物的数据库和redis缓存'''
+        #数据库
+        count = pymysql.connect(
+        host = 'mysqltest3.elelive.cn',     
+        port = 10634,        
+        user='showmetest_app',        
+        password='M90JB123kdF95',     
+        db= '',  
+        charset = 'gbk'     
+        )
+        count.ping(reconnect = True)
+        # 完成mysql数据库实例化
+        db1 = count.cursor()
+        db1.execute("delete FROM account.user_gift_grows_info where user_id = '11839791'")
+        count.commit()
+
+        # 连接redis
+        r = redis.StrictRedis(host='47.112.74.18',port=30013,password='showmeTEST_3318',db=0,decode_responses=True)
+        # 删除key的数据
+        r.delete("USER_GIFT_GROWABLE_ENABLE_11839791_202")
+        # print(r.smembers('USER_GIFT_GROWABLE_11839791_202'))
+        r.delete("USER_GIFT_GROWABLE_11839791_202")
+        # print(r.hgetall("USER_GIFT_GROWABLE_11839791_202"))
+
+    @staticmethod
+    def fans_clear():
+        '''清除用户粉丝身份'''
+        #数据库
+        count = pymysql.connect(
+        host = 'mysqltest3.elelive.cn',     
+        port = 10634,        
+        user='showmetest_app',        
+        password='M90JB123kdF95',     
+        db= '',  
+        charset = 'gbk'     
+        )
+        count.ping(reconnect = True)
+        # 完成mysql数据库实例化
+        db1 = count.cursor()
+        db1.execute("delete FROM fansclub.cmedal_info where user_id = '11839791'")
+        db1.execute("delete FROM fansclub.exp_record_info WHERE user_id = '11839791'")
+        db1.execute("delete FROM  fansclub.fans_joint_history_record_info WHERE user_id = '11839791'")
+        count.commit()
+
+        r = redis.StrictRedis(host='47.112.74.18',port=30013,password='showmeTEST_3318',db=0,decode_responses=True)
+        r.delete("FANS_EXP_CLUB_12229221")
+
+
 if __name__=='__main__':
-    ele_function.add_bean(67)
+    ele_function.grow_clear()
     

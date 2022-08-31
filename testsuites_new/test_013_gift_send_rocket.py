@@ -24,15 +24,15 @@ class Test_Gift_Sent_Rocket:
     def test_audience_sentgift_rocket(self, init_audience):
         # 进入直播间
         init_audience.enter_live_room()
-        # # 充值XX小象币
-        # ele_function.add_coin(111)
-        # # 打开礼物栏
-        # init_audience.live_click_gift_button()
-        # # 赠送XXX礼物
-
-        # # 断言余额为90
-        # init_audience.assert_gift_balance(89)
-        # # 关闭礼物栏面板
-        # self.base.back()
-        # # 断言评论区出现送礼消息
-        # init_audience.assert_gift_message()
+        # 充值15313小象币
+        ele_function.add_coin(15313)
+        # 打开礼物栏
+        init_audience.live_click_gift_button()
+        # 赠送横幅礼物-王者归来
+        init_audience.live_click_rocket_gift()
+        # 断言余额为313
+        init_audience.assert_gift_balance(313)
+        # 关闭礼物栏面板
+        self.base.back()
+        # 断言评论区出现送礼消息
+        init_audience.assert_gift_message()

@@ -2,20 +2,20 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "送礼-涂鸦礼物",
+    "name" : "送礼-背包-象币礼物",
     "children" : [ {
-      "name" : "送礼-涂鸦礼物",
+      "name" : "送礼-背包-象币礼物",
       "children" : [ {
-        "name" : "涂鸦礼物",
+        "name" : "背包-象币礼物",
         "children" : [ {
-          "name" : "涂鸦礼物",
-          "uid" : "959a8c1dcf87a094",
-          "parentUid" : "17424c62e19b79f48275f3af1d04326a",
+          "name" : "背包-象币礼物",
+          "uid" : "d63a452e27096141",
+          "parentUid" : "02e2a7767884f7a429f8cfe10d6305a6",
           "status" : "passed",
           "time" : {
-            "start" : 1661486275972,
-            "stop" : 1661486293699,
-            "duration" : 17727
+            "start" : 1661930063882,
+            "stop" : 1661930075275,
+            "duration" : 11393
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,10 +25,10 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "17424c62e19b79f48275f3af1d04326a"
+        "uid" : "02e2a7767884f7a429f8cfe10d6305a6"
       } ],
-      "uid" : "6ef45bc92fb3b369051dacd57389c9db"
+      "uid" : "381aa9d78561ad2a77c63cbdd7f64337"
     } ],
-    "uid" : "81725e64f07535851b0badce24647034"
+    "uid" : "52411a01c2097dc884a6a1d6d6e6b484"
   } ]
 }

@@ -4,16 +4,16 @@
   "children" : [ {
     "name" : "psnopc",
     "children" : [ {
-      "name" : "18508-MainThread",
+      "name" : "24148-MainThread",
       "children" : [ {
-        "name" : "涂鸦礼物",
-        "uid" : "959a8c1dcf87a094",
-        "parentUid" : "c09590c7c10e2e38d00b7e445b66fc10",
+        "name" : "背包-象币礼物",
+        "uid" : "d63a452e27096141",
+        "parentUid" : "fc2e59e7f31d9c8a66a138bf1e55bd7a",
         "status" : "passed",
         "time" : {
-          "start" : 1661486275972,
-          "stop" : 1661486293699,
-          "duration" : 17727
+          "start" : 1661930063882,
+          "stop" : 1661930075275,
+          "duration" : 11393
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,7 +23,7 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "c09590c7c10e2e38d00b7e445b66fc10"
+      "uid" : "fc2e59e7f31d9c8a66a138bf1e55bd7a"
     } ],
     "uid" : "6d0a66e85e40290317453efd15256ca5"
   } ]

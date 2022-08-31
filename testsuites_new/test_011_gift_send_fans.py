@@ -36,3 +36,5 @@ class Test_Gift_Sent_Fans:
         self.base.back()
         # 断言评论区出现送礼消息
         init_audience.assert_gift_message()
+        # 还原粉团
+        ele_function.fans_clear()

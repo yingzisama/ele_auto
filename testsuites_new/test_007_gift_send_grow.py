@@ -22,6 +22,8 @@ class Test_Gift_Sent_Grow:
     @allure.story('赠送成长类型礼物')
     @allure.title("赠送成长类型礼物")
     def test_audience_sentgift_grow(self, init_audience):
+        # 还原环境
+        ele_function.grow_clear()
         # 进入直播间
         init_audience.enter_live_room()
         # 充值99小象币

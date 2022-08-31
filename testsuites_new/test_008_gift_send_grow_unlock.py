@@ -22,6 +22,8 @@ class Test_Gift_Sent_Grow_Unlock:
     @allure.story('解锁成长礼物')
     @allure.title("解锁成长礼物")
     def test_audience_sentgift_grow_unlock(self, init_audience):
+        # 还原环境
+        ele_function.grow_clear()
         # 进入直播间
         init_audience.enter_live_room()
         # 充值212小象币
@@ -41,4 +43,3 @@ class Test_Gift_Sent_Grow_Unlock:
         self.base.back()
         # 断言评论区出现送礼消息
         init_audience.assert_gift_message()
-        # 还原环境

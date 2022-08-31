@@ -4,18 +4,18 @@
   "children" : [ {
     "name" : "testsuites_new",
     "children" : [ {
-      "name" : "test_012_gift_send_graffiti",
+      "name" : "test_015_gift_send_backpack_coin",
       "children" : [ {
-        "name" : "Test_Gift_Sent_Graffiti",
+        "name" : "Test_Gift_Sent",
         "children" : [ {
-          "name" : "涂鸦礼物",
-          "uid" : "959a8c1dcf87a094",
-          "parentUid" : "9cdfc3d1c3656e055e6b42e6d5a94ee2",
+          "name" : "背包-象币礼物",
+          "uid" : "d63a452e27096141",
+          "parentUid" : "2831deba884c4e93022eef82acec5840",
           "status" : "passed",
           "time" : {
-            "start" : 1661486275972,
-            "stop" : 1661486293699,
-            "duration" : 17727
+            "start" : 1661930063882,
+            "stop" : 1661930075275,
+            "duration" : 11393
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,9 +25,9 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "9cdfc3d1c3656e055e6b42e6d5a94ee2"
+        "uid" : "2831deba884c4e93022eef82acec5840"
       } ],
-      "uid" : "eaf6db15d7fef4246eec19e5feefe3da"
+      "uid" : "6670bc1ee4cd73d84df8279470e3a658"
     } ],
     "uid" : "9ce645e55721164e285dec635474a475"
   } ]
