@@ -1,10 +1,10 @@
 [ {
-  "uid" : "d63a452e27096141",
-  "name" : "背包-象币礼物",
+  "uid" : "2fad6d54c4e594b1",
+  "name" : "点击首页banner",
   "time" : {
-    "start" : 1661930063882,
-    "stop" : 1661930075275,
-    "duration" : 11393
+    "start" : 1668570862076,
+    "stop" : 1668570871119,
+    "duration" : 9043
   },
   "status" : "passed",
   "severity" : "normal"

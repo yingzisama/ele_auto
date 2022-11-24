@@ -7,6 +7,8 @@ from module.audience import Audience
 from tools.ele_function import ele_function
 logger = JFMlogging().getloger()
 
+pytestmark = pytest.mark.skip()
+
 @pytest.mark.usefixtures('driver_setup')
 @allure.epic("ËÍÀñ-Ã¤ºĞÀñÎï")
 @allure.feature("ËÍÀñ-Ã¤ºĞÀñÎï")

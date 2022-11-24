@@ -246,6 +246,7 @@ class Base(object):
         模拟物理键确认
         :return:
         """
+        self.d.sleep(0.5)
         self.d.press("enter")
         logger.info("点击确认")
 

@@ -124,6 +124,16 @@ mind_downbutton = '//*[@resource-id="com.yiwuzhibo:id/tab_layout"]/android.widge
 mind_people_center = '个人中心'
 # 黑名单管理
 mind_shield_manager = '黑名单管理'
+# 发现
+ele_tab_one_found = '发现'
+# 越南
+ele_country_VN = '越南'
+# banner
+ele_banner = '//*[@resource-id="com.yiwuzhibo:id/recycle_view"]/android.widget.RelativeLayout[1]'
+# 直播间元素-主播头像框
+ele_user_avatar = 'com.yiwuzhibo:id/user_avatar'
+# 直播间元素-送礼按钮
+ele_play_gift = 'com.yiwuzhibo:id/liveroom_play_gift'
 
 class Audience(Base):
     def __init__(self,driver):
@@ -207,7 +217,7 @@ class Audience(Base):
     @allure.step('断言主播主页界面元素')
     def assert_host_person_detail(self):
         #断言主播关注数
-        self.base.assert_image_findit('./aseert_pic/audience_detail_follower.jpg')
+        self.base.assert_image_findit('/aseert_pic/audience_detail_follower.jpg')
         #断言主播粉丝数
         self.base.assert_image_findit('./aseert_pic/audience_detail_fans.jpg')
         #断言主播贡献榜入口
@@ -233,6 +243,10 @@ class Audience(Base):
     def assert_live_room_im(self):
         a = self.base.elements_exist('com.yiwuzhibo:id/live_room_im_tv','a 正在自动化测试：@自动化测试主播端 111')
         assert a == True
+
+    @allure.step('等待15s')
+    def time_sleep(self):
+        self.base.wait_time(15)
 
     @allure.step('主播信息卡片-获取粉丝数')
     def get_hostcard_fans_num(self):
@@ -342,7 +356,8 @@ class Audience(Base):
 
     @allure.step('赠送横幅-王者归来')
     def live_click_rocket_gift(self):
-        self.base.click(ele_liveroom_langman_tab,'点击切换到礼物-趣味tab')
+        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
+        self.base.click(ele_liveroom_langman_tab,'点击切换到礼物-浪漫tab')
         self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
         self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
         self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
@@ -401,6 +416,7 @@ class Audience(Base):
 
     @allure.step('断言-评论区出现送礼消息')
     def assert_gift_message(self):
+        self.base.wait_time(2)
         self.base.assert_image_findit('./aseert_pic/send_gift.png')
 
     @allure.step('批量送礼-啾咪')
@@ -419,3 +435,19 @@ class Audience(Base):
         self.base.click(ele_liveroom_gift_sent_batch,'点出批量选择')
         self.base.click(ele_liveroom_gift_sent_batch66,'选择批量数66')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
+    @allure.step('点击发现-越南')
+    def live_click_VNpage(self):
+        self.base.click(ele_tab_one_found,"点击发现tab")
+        self.base.click(ele_country_VN,"点击越南")
+
+    @allure.step('点击banner')
+    def live_click_banner(self):
+        self.base.click(ele_banner,'点击banner')
+
+    @allure.step('断言-当前在直播间内')
+    def assert_live_room(self):
+        #断言直播间头像存在
+        self.base.assert_element_exist(ele_user_avatar)
+        #断言直播间送礼按钮存在
+        self.base.assert_element_exist(ele_play_gift)

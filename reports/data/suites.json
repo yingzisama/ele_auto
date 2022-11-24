@@ -4,18 +4,18 @@
   "children" : [ {
     "name" : "testsuites_new",
     "children" : [ {
-      "name" : "test_015_gift_send_backpack_coin",
+      "name" : "test_017_banner_click",
       "children" : [ {
-        "name" : "Test_Gift_Sent",
+        "name" : "Test_Banner_Click",
         "children" : [ {
-          "name" : "背包-象币礼物",
-          "uid" : "d63a452e27096141",
-          "parentUid" : "2831deba884c4e93022eef82acec5840",
+          "name" : "点击首页banner",
+          "uid" : "2fad6d54c4e594b1",
+          "parentUid" : "ae7707a3d78d0744b323a4fe69c8bd5f",
           "status" : "passed",
           "time" : {
-            "start" : 1661930063882,
-            "stop" : 1661930075275,
-            "duration" : 11393
+            "start" : 1668570862076,
+            "stop" : 1668570871119,
+            "duration" : 9043
           },
           "flaky" : false,
           "newFailed" : false,
@@ -25,9 +25,9 @@
           "retriesStatusChange" : false,
           "parameters" : [ ]
         } ],
-        "uid" : "2831deba884c4e93022eef82acec5840"
+        "uid" : "ae7707a3d78d0744b323a4fe69c8bd5f"
       } ],
-      "uid" : "6670bc1ee4cd73d84df8279470e3a658"
+      "uid" : "345e5c7c1881e1558a50cf5c02cb05e1"
     } ],
     "uid" : "9ce645e55721164e285dec635474a475"
   } ]
