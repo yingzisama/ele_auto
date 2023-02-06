@@ -118,5 +118,4 @@ class ele_function:
 
 
 if __name__=='__main__':
-    ele_function.grow_clear()
-    
+    ele_function.add_bean(10)

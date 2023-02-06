@@ -1,5 +1,0 @@
-[2022-09-27 10:26:42,052] [INFO] [psnopc][conftest.py - line:12] 自动化测试开始!
-[2022-09-27 10:26:42,055] [INFO] [psnopc][driver.py - line:12] bc5a8356
-[2022-09-27 10:26:47,734] [INFO] [psnopc][driver.py - line:18] 初始化driver异常!USB device bc5a8356 is offline
-[2022-09-27 10:26:47,734] [INFO] [psnopc][conftest.py - line:14] driver初始化
-[2022-09-27 10:26:49,819] [INFO] [psnopc][run.py - line:22] 报告地址:d:\workspace_new\uiauto2_ele/reports/index.html

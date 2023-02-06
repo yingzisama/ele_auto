@@ -2,7 +2,11 @@
 from tools.loggers import JFMlogging
 from module.base import Base
 import allure
+import os
+
+project_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 logger = JFMlogging().getloger()
+
 
 #搜索按钮
 ele_iv_search = 'com.yiwuzhibo:id/icon_fun1'
@@ -38,6 +42,7 @@ ele_liveroom_gift_button = 'com.yiwuzhibo:id/liveroom_play_gift'
 ele_liveroom_rank_1_content = 'com.yiwuzhibo:id/tv_content'
 # 普通小象币礼物
 ele_liveroom_common_coin_gift = '啾咪'
+ele_liveroom_common_1000_coin_gift = 'Chill'
 # 礼物栏-背包
 ele_liveroom_backpack = 'com.yiwuzhibo:id/package_button'
 # 成长类礼物
@@ -56,6 +61,8 @@ ele_liveroom_langman_tab = '浪漫'
 ele_liveroom_hot_tab = '热门'
 # 礼物栏-特权tab
 ele_liveroom_tequan_tab = '特权'
+# 礼物栏-LUCKYtab
+ele_liveroom_LUCKY_tab = 'LUCKY'
 # 普通象豆礼物
 ele_liveroom_common_bean_gift = '蛋卷寿司'
 # 象豆礼物-拳套
@@ -129,22 +136,85 @@ ele_tab_one_found = '发现'
 # 越南
 ele_country_VN = '越南'
 # banner
-ele_banner = '//*[@resource-id="com.yiwuzhibo:id/recycle_view"]/android.widget.RelativeLayout[1]'
+ele_banner = '//*[@resource-id="com.yiwuzhibo:id/refresh_layout"]/android.widget.FrameLayout[1]/androidx.recyclerview.widget.RecyclerView[1]/android.widget.RelativeLayout[1]'
 # 直播间元素-主播头像框
 ele_user_avatar = 'com.yiwuzhibo:id/user_avatar'
 # 直播间元素-送礼按钮
 ele_play_gift = 'com.yiwuzhibo:id/liveroom_play_gift'
+# 主播榜单入口
+ele_rank_flipper_star_value = '//*[@resource-id="com.yiwuzhibo:id/flipper_star_value"]/android.view.ViewGroup[1]/android.widget.ImageView[1]'
+# 贡献榜入口
+ele_rank_flipper_contribution_rank = '//*[@resource-id="com.yiwuzhibo:id/flipper_contribution_rank"]/android.view.ViewGroup[1]/android.widget.ImageView[1]'
+# 热度榜
+ele_hot_rank = '热度榜'
+# 热度值
+ele_hot_rank_value = '//*[@resource-id="com.yiwuzhibo:id/fly_user_info"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.view.ViewGroup[1]/android.widget.TextView[3]'
+# 人气榜
+ele_popularity_rank = '人气榜'
+# 人气值
+ele_popularity_rank_value = '//*[@resource-id="com.yiwuzhibo:id/fly_user_info"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.view.ViewGroup[1]/android.widget.TextView[3]'
+# 魅力榜
+ele_charm_rank = '魅力榜'
+# PK榜
+ele_pk_rank = 'PK榜'
+# 周星榜
+ele_weekstar_rank = '周星榜'
+# 公会榜
+ele_guild_rank = '公会榜'
+# 贡献榜
+ele_Contribution_rank = '贡献榜'
+# 粉丝榜
+ele_fans_rank = '粉丝榜'
+
 
 class Audience(Base):
     def __init__(self,driver):
         self.base = Base(driver)
+        
 
     @allure.step("进入直播间")
     def enter_live_room(self):
         self.base.click(ele_iv_search,'搜索按钮')
         self.base.send_keys(ele_et_search,'12229221','输入搜索内容-12229221')
-        self.base.enter()
+        self.base.d.send_action("search")
         self.base.click(ele_host_name,'点击直播间')
+
+    @allure.step("进入主播榜单")
+    def click_rank_host(self):
+        self.base.click(ele_rank_flipper_star_value,'进入主播榜单页')
+
+    @allure.step("进入观众榜单")
+    def click_rank_audience(self):
+        self.base.click(ele_rank_flipper_star_value,'进入观众榜单页')
+
+    @allure.step("进入热度榜tab")
+    def click_hot_rank_tab(self):
+        self.base.click(ele_hot_rank,'进入热度榜tab')
+
+    @allure.step("进入人气榜tab")
+    def click_popularity_rank_tab(self):
+        self.base.click(ele_popularity_rank,'进入人气榜tab')
+
+    @allure.step("进入魅力榜tab")
+    def click_charm_rank_tab(self):
+        self.base.click(ele_charm_rank,'进入魅力榜tab')
+
+    @allure.step("进入PK榜tab")
+    def click_pk_rank_tab(self):
+        self.base.click(ele_pk_rank,'进入PK榜tab')
+
+    @allure.step("进入周星榜tab")
+    def click_weekstar_rank_tab(self):
+        self.base.click(ele_weekstar_rank,'进入周星榜tab')
+
+    @allure.step("进入周星榜tab")
+    def click_weekstar_rank_tab(self):
+        self.base.click(ele_weekstar_rank,'进入周星榜tab')
+
+    @allure.step("进入粉丝榜tab")
+    def click_fans_rank_tab(self):
+        self.base.click(ele_fans_rank,'进入粉丝榜tab')
+        
 
     @allure.step('断言直播间观众端界面正常展示')
     def assert_live_room_element(self):
@@ -217,19 +287,19 @@ class Audience(Base):
     @allure.step('断言主播主页界面元素')
     def assert_host_person_detail(self):
         #断言主播关注数
-        self.base.assert_image_findit('/aseert_pic/audience_detail_follower.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/audience_detail_follower.jpg')
         #断言主播粉丝数
-        self.base.assert_image_findit('./aseert_pic/audience_detail_fans.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/audience_detail_fans.jpg')
         #断言主播贡献榜入口
-        self.base.assert_image_findit('./aseert_pic/audience_detail_contributionRanking.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/audience_detail_contributionRanking.jpg')
         #断言主播粉丝榜入口
-        self.base.assert_image_findit('./aseert_pic/audience_detail_fansRanking.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/audience_detail_fansRanking.jpg')
         #断言主播短视频作品tab
-        self.base.assert_image_findit('./aseert_pic/audience_detail_myVideo.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/audience_detail_myVideo.jpg')
         #断言主播喜欢的短视频作品tab
-        self.base.assert_image_findit('./aseert_pic/audience_detail_myLikeVideo.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/audience_detail_myLikeVideo.jpg')
         #断言主播关注按钮
-        self.base.assert_image_findit('./aseert_pic/audience_detail_focus.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/audience_detail_focus.jpg')
 
     @allure.step('点击@主播')
     def click_hostcard_eit(self):
@@ -273,11 +343,11 @@ class Audience(Base):
 
     @allure.step('断言拉黑主播存在')
     def assert_shield_host_exist(self):
-        self.base.assert_image_findit('./aseert_pic/mind_shield_manager.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/mind_shield_manager.jpg')
 
     @allure.step('点击移除黑名单用户')
     def click_shield_host_remove(self):
-        self.base.click_image_findit('./aseert_pic/mind_shield_manager_remove.jpg')
+        self.base.click_image_findit(project_path+'/aseert_pic/mind_shield_manager_remove.jpg')
 
     @allure.step('退出直播间')
     def click_ele_av_room_top_close(self):
@@ -315,9 +385,16 @@ class Audience(Base):
         self.base.click(ele_liveroom_common_coin_gift,'点击礼物-啾咪')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
 
+    @allure.step('赠送小象币礼物-Chill')
+    def live_click_1000coin_gift(self):
+        self.base.click(ele_liveroom_ele_tab,'点击礼物栏-小象tab')
+        self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
+        self.base.click(ele_liveroom_common_1000_coin_gift,'点击礼物-Chill')
+        self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
+
     @allure.step('赠送象豆礼物-蛋卷寿司')
     def live_click_20bean_gift(self):
-        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
+        self.base.swipe_to_element(ele_liveroom_tequan_tab,ele_liveroom_LUCKY_tab,1)
         self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
@@ -339,7 +416,7 @@ class Audience(Base):
 
     @allure.step('断言-玫瑰花丛(解锁)存在')
     def assert_big_meigui(self):
-        self.base.assert_image_findit('./aseert_pic/big_meigui.jpg')
+        self.base.assert_image_findit(project_path+'/aseert_pic/big_meigui.jpg')
 
     @allure.step('赠送成长礼物-玫瑰花丛')
     def live_click_grow_gift_bigmeigui(self):
@@ -356,7 +433,7 @@ class Audience(Base):
 
     @allure.step('赠送横幅-王者归来')
     def live_click_rocket_gift(self):
-        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
+        self.base.swipe_to_element(ele_liveroom_tequan_tab,ele_liveroom_LUCKY_tab,1)
         self.base.click(ele_liveroom_langman_tab,'点击切换到礼物-浪漫tab')
         self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
         self.base.swipe_x1y1x2y2(0.827, 0.806,0.121,  0.806)
@@ -397,7 +474,7 @@ class Audience(Base):
 
     @allure.step('赠送象豆礼物combo-蛋卷寿司')
     def live_click_20bean_gift_combo(self):
-        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
+        self.base.swipe_to_element(ele_liveroom_tequan_tab,ele_liveroom_LUCKY_tab,1)
         self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_button,'点击赠送')
@@ -417,7 +494,7 @@ class Audience(Base):
     @allure.step('断言-评论区出现送礼消息')
     def assert_gift_message(self):
         self.base.wait_time(2)
-        self.base.assert_image_findit('./aseert_pic/send_gift.png')
+        self.base.assert_image_findit(project_path+'/aseert_pic/send_gift.png')
 
     @allure.step('批量送礼-啾咪')
     def live_click_10coin_gift_batch66(self):
@@ -429,7 +506,7 @@ class Audience(Base):
 
     @allure.step('批量赠送象豆礼物-蛋卷寿司')
     def live_click_20bean_gift_batch66(self):
-        self.base.swipe_to_element(ele_liveroom_quwei_tab,ele_liveroom_ele_tab,1)
+        self.base.swipe_to_element(ele_liveroom_tequan_tab,ele_liveroom_ele_tab,1)
         self.base.click(ele_liveroom_bean_tab,'点击礼物栏-象豆tab')
         self.base.click(ele_liveroom_common_bean_gift,'点击礼物-蛋卷寿司')
         self.base.click(ele_liveroom_gift_sent_batch,'点出批量选择')
@@ -451,3 +528,4 @@ class Audience(Base):
         self.base.assert_element_exist(ele_user_avatar)
         #断言直播间送礼按钮存在
         self.base.assert_element_exist(ele_play_gift)
+

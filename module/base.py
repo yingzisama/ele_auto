@@ -461,3 +461,75 @@ class Base(object):
         element_text = self.d(resourceId=element).get_text()
         logger.info("元素:「{}」的text为「{}」".format(element,element_text))
         return element_text
+
+    def get_text_int(self,element):
+        """
+        获取元素的int值
+        :param element: 元素定位
+        :return:
+        """
+        element_value = self.d(resourceId=element).get_text()
+        int_value = int(element_value.replace(',',''))
+        logger.info("元素{}的值为{}".format(element,int_value))
+        return int_value
+        
+    def get_text_xpath(self,element):
+        """
+        获取xpath元素的值
+        :param element: 元素定位
+        :return:
+        """
+        element_value = self.d.xpath(element).get_text()
+        int_value = int(element_value.replace(',',''))
+        logger.info("元素{}的值为{}".format(element,int_value))
+        return int_value
+
+    def assert_element_text(self, element ,value_ex):
+        """
+        断言元素的值是否为预期值
+        :param element: 元素定位
+        :param value_ex: 预期值
+        :return:
+        """
+        element_value = self.d(resourceId=element).get_text()
+        int_value = int(element_value.replace(',',''))
+        assert int_value == value_ex,"断言元素「{}」值不等于「{}」".format(element,value_ex)
+        logger.info("断言元素「{}」值等于「{}」".format(element,value_ex))
+        
+    def assert_change_value(self, value1:int ,value2 : int, num : int):
+        """
+        断言value2-value1的值为num
+        :param value1: 原本的值
+        :param value2: 改变的值
+        :param num: 变化的具体值
+        :return:
+        """
+        assert value2 == value1 + num,"断言元素「{}」值不等于「{}」".format(value2,value1+num)
+        logger.info("断言元素「{}」值等于「{}」".format(value2,value1+num))
+
+    def get_hot_rank_xpath(self,path):
+        """
+        获取热度榜主播热度值xpath的int值
+        :return:
+        """
+        element_value_str = self.d.xpath(path).get_text()
+        logger.info("断言元素值等于「{}」".format(element_value_str))
+        if element_value_str.__contains__('K'):
+            if element_value_str.__contains__('.'):
+                value_str_int = element_value_str.split('.')
+                return int(value_str_int[0])
+            else:
+                value_str_int = int(element_value_str.replace('K',''))
+                return value_str_int
+        else:
+            return 0
+
+    def get_popularity_rank_xpath(self,path):
+        """
+        获取人气榜主播人气值xpath的int值
+        :return:
+        """
+        element_value_str = self.d.xpath(path).get_text()
+        int_value = int(element_value_str.replace(',',''))
+        logger.info("断言元素值等于「{}」".format(int_value))
+        return int_value
